@@ -1,0 +1,9 @@
+button {
+  border: none;
+  background: none;
+  padding: 21px 49px;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #5b2386;
+  font-family: 'GmarketSansMedium';
+}

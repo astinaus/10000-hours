@@ -1,0 +1,19 @@
+.footer {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+.footer p {
+  font-size: 12px;
+  font-family: 'Noto Sans KR';
+  text-align: center;
+  line-height: 17px;
+}

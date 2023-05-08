@@ -19,6 +19,7 @@
 
 q {
   display: inline-block;
+  width: 100%;
 }
 
 .quote-title {
@@ -37,7 +38,7 @@ q {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 25px;
-  width: 493px;
+  max-width: 493px;
 }
 
 .quote-desc strong {

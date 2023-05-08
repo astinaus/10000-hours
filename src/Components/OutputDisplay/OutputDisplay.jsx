@@ -25,7 +25,12 @@ export default function OutputDisplay(props) {
             txt="훈련하러 가기 GO!GO!"
             event={props.setModal}
           />
-          <Button bgColor="#fff" borderRadius="56px" txt="공유하기" />
+          <Button
+            bgColor="#fff"
+            borderRadius="56px"
+            txt="공유하기"
+            event={props.copyURL}
+          />
         </div>
       </section>
     </>

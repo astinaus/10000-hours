@@ -1,3 +1,82 @@
-* {
-  box-sizing: border-box;
+.input-container {
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  margin-bottom: 130px;
+  font-family: 'GmarketSansMedium';
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+q {
+  display: inline-block;
+}
+
+.quote-title {
+  font-family: 'OTEnjoystoriesBA';
+  font-size: 36px;
+  color: #f5df4d;
+  margin-top: 46px;
+  font-weight: 700;
+}
+
+.quote-desc {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 50px;
+  background-image: url('../../Assets/Images/quotes.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 25px;
+  width: 493px;
+}
+
+.quote-desc strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.input-form {
+  margin-top: 102px;
+  font-size: 24px;
+}
+
+.input-form p:first-child {
+  margin-bottom: 27px;
+}
+
+.input-form p:last-child {
+  margin-top: 115px;
+  transform: translateX(30px);
+}
+
+.input-form p:last-child::after {
+  content: '';
+  display: inline-block;
+  width: 64px;
+  height: 72px;
+  background: url('../../Assets/Images/click.png') no-repeat;
+  transform: translateX(8px) translateY(50px);
+}
+
+.input-form input {
+  border-radius: 7px;
+  width: 200px;
+  margin: 0 17px;
+  font-size: 24px;
+  padding: 15px 20px;
+}
+
+.input-form input::placeholder {
+  font-family: 'GmarketSansMedium';
+  color: #babcbe;
 }

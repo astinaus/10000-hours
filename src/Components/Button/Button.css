@@ -6,4 +6,6 @@ button {
   font-size: 24px;
   color: #5b2386;
   font-family: 'GmarketSansMedium';
+  font-weight: 700;
+  cursor: pointer;
 }

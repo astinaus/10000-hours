@@ -1,3 +1,9 @@
+img {
+  max-width: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
 .footer {
   color: #fff;
   display: flex;
@@ -5,10 +11,12 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  position: absolute;
-  bottom: 40px;
+  position: relative;
+  transform: translateY(-50%);
+  bottom: 0px;
   left: 0;
   right: 0;
+  width: 100%;
 }
 
 .footer p {

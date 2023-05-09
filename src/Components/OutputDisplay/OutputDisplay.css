@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   font-family: 'GmarketSansMedium';
+  padding-bottom: 100px;
 }
 
 .output-display div {

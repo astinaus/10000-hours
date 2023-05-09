@@ -6,14 +6,13 @@ img {
 
 .footer {
   color: #fff;
-  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
   position: relative;
-  transform: translateY(-20%);
+  transform: translateY(-30%);
   bottom: 0px;
   left: 0;
   right: 0;

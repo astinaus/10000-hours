@@ -118,6 +118,11 @@ q {
     margin-top: 30px;
   }
 
+  .quote-desc {
+    width: 65%;
+    background-position: 0 20px;
+  }
+
   .quote-desc,
   .input-form {
     margin-top: 50px;

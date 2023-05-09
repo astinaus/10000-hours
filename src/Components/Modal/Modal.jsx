@@ -5,11 +5,7 @@ import Button from '../Button/Button';
 
 export default function Modal(props) {
   return (
-    <section
-      className="modal-wrapper"
-      style={props.modal ? { display: 'block' } : { display: 'none' }}
-      onClick={props.setModal}
-    >
+    <section className="modal-wrapper" onClick={props.setModal}>
       <div className="modal">
         <strong>화이팅!! ♥♥</strong>
         <span>당신의 꿈을 응원합니다!</span>

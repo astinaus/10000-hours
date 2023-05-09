@@ -28,6 +28,7 @@ function App() {
   const handleResultDisplay = () => {
     if (!fieldInput || !hourInput) return alert('입력되지 않았습니다.');
     if (hourInput > 24) return alert('24시간을 초과할 수 없습니다.');
+    if (hourInput < 1) return alert('1시간 미만은 입력할 수 없습니다.');
     setFieldResult(fieldInput);
     setHourResult(hourInput);
     if (resultDisplay) setResultDisplay(false);

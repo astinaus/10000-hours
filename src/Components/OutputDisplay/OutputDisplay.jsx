@@ -14,18 +14,12 @@ export default function OutputDisplay(props) {
           대략 <strong>{hour}</strong> 일 이상 훈련하셔야 합니다! :)
         </div>
         <div className="btn-cont">
-          <Button
-            bgColor="#FCEE21"
-            borderRadius="56px"
-            txt="훈련하러 가기 GO!GO!"
-            event={props.setModal}
-          />
-          <Button
-            bgColor="#fff"
-            borderRadius="56px"
-            txt="공유하기"
-            event={props.copyURL}
-          />
+          <Button bgColor="#FCEE21" event={props.setModal}>
+            훈련하러 가기 GO!GO!
+          </Button>
+          <Button bgColor="#fff" event={props.copyURL}>
+            공유하기
+          </Button>
         </div>
       </section>
     </>

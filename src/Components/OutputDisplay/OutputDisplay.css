@@ -8,7 +8,7 @@
 }
 
 .output-display div {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 20px;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .output-display div strong {
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 
@@ -26,4 +26,20 @@
   padding-top: 130px;
   display: flex;
   gap: 18px;
+}
+
+@media (389px < width < 610px) {
+  .output-display div {
+    gap: 10px;
+  }
+  .output-display div strong {
+    font-size: 3.5rem;
+  }
+  .btn-cont {
+    padding-top: 70px;
+  }
+
+  .btn-cont button {
+    padding: 15px 35px;
+  }
 }

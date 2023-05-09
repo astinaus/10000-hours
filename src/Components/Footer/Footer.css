@@ -20,8 +20,14 @@ img {
 }
 
 .footer p {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: 'Noto Sans KR';
   text-align: center;
-  line-height: 17px;
+  line-height: 1.0625rem;
+}
+
+@media (389px < width < 610px) {
+  .footer img {
+    width: 91px;
+  }
 }

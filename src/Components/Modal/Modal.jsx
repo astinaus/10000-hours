@@ -10,12 +10,9 @@ export default function Modal(props) {
         <strong>화이팅!! ♥♥</strong>
         <span>당신의 꿈을 응원합니다!</span>
         <img src={licat} alt="licat" />
-        <Button
-          bgColor="#FCEE21"
-          borderRadius="56px"
-          txt="종료하고 진짜 훈련하러 가기 GO!GO!"
-          event={props.setModal}
-        />
+        <Button bgColor="#FCEE21" event={props.setModal}>
+          종료하고 진짜 훈련하러 가기 GO!GO!
+        </Button>
       </div>
     </section>
   );

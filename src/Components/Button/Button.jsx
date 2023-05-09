@@ -6,12 +6,11 @@ export default function Button(props) {
     <button
       style={{
         backgroundColor: props.bgColor,
-        borderRadius: props.borderRadius,
       }}
       onClick={props.event}
       type="button"
     >
-      {props.txt}
+      {props.children}
     </button>
   );
 }

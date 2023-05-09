@@ -47,12 +47,9 @@ export default function InputDisplay(props) {
           <span>시간씩 훈련할 것이다.</span>
         </p>
         <p>
-          <Button
-            bgColor="#FCEE21"
-            borderRadius="56px"
-            event={props.onClick}
-            txt="나는 며칠 동안 훈련을 해야 1만 시간이 될까?"
-          />
+          <Button bgColor="#FCEE21" event={props.onClick}>
+            나는 며칠 동안 훈련을 해야 1만 시간이 될까?
+          </Button>
         </p>
       </form>
     </section>

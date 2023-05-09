@@ -37,3 +37,19 @@
 body {
   background-color: #5b2386;
 }
+
+#root {
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (389px < width < 610px) {
+  :root {
+    font-size: 8px;
+  }
+}

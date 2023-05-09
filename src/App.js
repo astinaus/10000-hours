@@ -22,7 +22,7 @@ function App() {
   };
 
   const handleHourChange = (e) => {
-    setHourInput(e.target.value);
+    setHourInput(Math.floor(e.target.value));
   };
 
   const handleResultDisplay = () => {

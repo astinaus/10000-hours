@@ -2,13 +2,10 @@ import React from 'react';
 import loading from '../../Assets/Images/loading.png';
 import './Loading.css';
 
-export default function Loading(props) {
+export default function Loading() {
   return (
     <>
-      <article
-        className="loading"
-        style={props.loading ? { display: 'flex' } : { display: 'none' }}
-      >
+      <article className="loading">
         <img src={loading} alt="Loading" />
       </article>
     </>

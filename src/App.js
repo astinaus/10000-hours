@@ -6,6 +6,7 @@ import Footer from './Components/Footer/Footer';
 import InputDisplay from './Components/InputDisplay/InputDisplay';
 import OutputDisplay from './Components/OutputDisplay/OutputDisplay';
 import Modal from './Components/Modal/Modal';
+import Loading from './Components/Loading/Loading';
 
 function App() {
   const [fieldInput, setFieldInput] = useState('');
@@ -13,6 +14,8 @@ function App() {
   const [resultDisplay, setResultDisplay] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [fieldResult, setFieldResult] = useState('');
+  const [hourResult, setHourResult] = useState('');
 
   const handleFieldChange = (e) => {
     setFieldInput(e.target.value);
@@ -24,6 +27,9 @@ function App() {
 
   const handleResultDisplay = () => {
     if (!fieldInput || !hourInput) return alert('입력되지 않았습니다.');
+    if (hourInput > 24) return alert('24시간을 초과할 수 없습니다.');
+    setFieldResult(fieldInput);
+    setHourResult(hourInput);
     if (resultDisplay) setResultDisplay(false);
     setIsLoading(true);
     setTimeout(() => {
@@ -59,14 +65,16 @@ function App() {
         onChangeHour={handleHourChange}
         onClick={handleResultDisplay}
       />
-      <OutputDisplay
-        field={fieldInput}
-        hour={hourInput ? parseInt(hourInput) : null}
-        display={resultDisplay}
-        loading={isLoading}
-        setModal={handleModalOpen}
-        copyURL={handleCopyURL}
-      />
+      {isLoading && <Loading />}
+      {resultDisplay && (
+        <OutputDisplay
+          field={fieldResult}
+          hour={hourResult ? parseInt(hourResult) : null}
+          display={resultDisplay}
+          setModal={handleModalOpen}
+          copyURL={handleCopyURL}
+        />
+      )}
       <Modal modal={isModalOpen} setModal={handleModalOpen} />
       <Footer />
     </>

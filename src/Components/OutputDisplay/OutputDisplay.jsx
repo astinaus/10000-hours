@@ -1,17 +1,12 @@
 import React from 'react';
 import './OutputDisplay.css';
 import Button from '../Button/Button';
-import Loading from '../Loading/Loading';
 
 export default function OutputDisplay(props) {
   const hour = props.hour ? Math.floor(10000 / props.hour) : 0;
   return (
     <>
-      <Loading loading={props.loading} />
-      <section
-        className="output-display"
-        style={props.display ? { display: 'flex' } : { display: 'none' }}
-      >
+      <section className="output-display">
         <div>
           당신은 <strong>{props.field}</strong> 전문가가 되기 위해서
         </div>

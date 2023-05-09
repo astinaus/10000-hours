@@ -35,6 +35,7 @@ export default function InputDisplay(props) {
           <input
             type="number"
             min={1}
+            max={24}
             placeholder="예)5"
             id="hour"
             value={props.hour}

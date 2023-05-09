@@ -75,7 +75,7 @@ function App() {
           copyURL={handleCopyURL}
         />
       )}
-      <Modal modal={isModalOpen} setModal={handleModalOpen} />
+      {isModalOpen && <Modal setModal={handleModalOpen} />}
       <Footer />
     </>
   );

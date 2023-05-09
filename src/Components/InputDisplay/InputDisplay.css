@@ -95,7 +95,7 @@ q {
 @media (389px < width < 610px) {
   .input-form button {
     border-radius: 13px;
-    width: 250px;
+    width: 260px;
   }
   .input-form p:last-child::after {
     width: 40px;

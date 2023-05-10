@@ -7,8 +7,8 @@ export default function Button(props) {
       style={{
         backgroundColor: props.bgColor,
       }}
-      onClick={props.event}
-      type="button"
+      onClick={props.event || null}
+      type={props.type || 'button'}
     >
       {props.children}
     </button>

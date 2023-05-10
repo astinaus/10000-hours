@@ -3,12 +3,14 @@ import './OutputDisplay.css';
 import Button from '../Button/Button';
 
 export default function OutputDisplay(props) {
-  const hour = props.hour ? Math.floor(10000 / props.hour) : 0;
+  const hour = props.inputResult.hour
+    ? Math.floor(10000 / props.inputResult.hour)
+    : 0;
   return (
     <>
       <section className="output-display">
         <div>
-          당신은 <strong>{props.field}</strong> 전문가가 되기 위해서
+          당신은 <strong>{props.inputResult.field}</strong> 전문가가 되기 위해서
         </div>
         <div>
           대략 <strong>{hour}</strong> 일 이상 훈련하셔야 합니다! :)

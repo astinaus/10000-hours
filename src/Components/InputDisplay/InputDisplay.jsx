@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './InputDisplay.css';
 
-export default function InputDisplay(props) {
+export default function InputDisplay({ setInputResult, handleResultDisplay }) {
+  const [fieldInput, setFieldInput] = useState('');
+  const [hourInput, setHourInput] = useState('');
+
+  const handleFieldChange = (e) => {
+    setFieldInput(e.target.value);
+  };
+
+  const handleHourChange = (e) => {
+    setHourInput(Math.floor(e.target.value));
+  };
+
+  const submitData = (event) => {
+    event.preventDefault();
+    if (!fieldInput || !hourInput) return alert('입력되지 않았습니다.');
+    if (hourInput > 24) return alert('24시간을 초과할 수 없습니다.');
+    if (hourInput < 1) return alert('1시간 미만은 입력할 수 없습니다.');
+    const result = {
+      field: fieldInput,
+      hour: hourInput,
+    };
+    setInputResult(result);
+    handleResultDisplay();
+  };
+
   return (
     <section className="input-container">
       <q className="quote-title">
@@ -15,15 +39,15 @@ export default function InputDisplay(props) {
         최소한 1만 시간의 훈련이 필요하다는 법칙이다.
       </q>
 
-      <form className="input-form">
+      <form className="input-form" onSubmit={submitData}>
         <p>
           <span>나는</span>
           <input
             type="text"
             placeholder="예)프로그래밍"
             id="field"
-            value={props.field}
-            onChange={props.onChangeField}
+            value={fieldInput}
+            onChange={handleFieldChange}
           />
           <label className="a11y-hidden" htmlFor="field">
             분야
@@ -38,8 +62,8 @@ export default function InputDisplay(props) {
             max={24}
             placeholder="예)5"
             id="hour"
-            value={props.hour}
-            onChange={props.onChangeHour}
+            value={hourInput}
+            onChange={handleHourChange}
           />
           <label className="a11y-hidden" htmlFor="hour">
             시간
@@ -47,7 +71,7 @@ export default function InputDisplay(props) {
           <span>시간씩 훈련할 것이다.</span>
         </p>
         <p>
-          <Button bgColor="#FCEE21" event={props.onClick}>
+          <Button bgColor="#FCEE21" type="submit">
             나는 며칠 동안 훈련을 해야 1만 시간이 될까?
           </Button>
         </p>

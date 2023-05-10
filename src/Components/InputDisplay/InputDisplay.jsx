@@ -6,6 +6,11 @@ export default function InputDisplay({ setInputResult, handleResultDisplay }) {
   const [fieldInput, setFieldInput] = useState('');
   const [hourInput, setHourInput] = useState('');
 
+  const handleInputReset = () => {
+    setFieldInput('');
+    setHourInput('');
+  };
+
   const handleFieldChange = (e) => {
     setFieldInput(e.target.value);
   };
@@ -25,6 +30,7 @@ export default function InputDisplay({ setInputResult, handleResultDisplay }) {
     };
     setInputResult(result);
     handleResultDisplay();
+    handleInputReset();
   };
 
   return (
